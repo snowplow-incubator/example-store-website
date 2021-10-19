@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <link href={% static 'ecommerce/css/custom.css' %} rel="stylesheet">
+
+        {% include 'ecommerce/_snowplow.html' %}
+
+        <!-- Snowplow starts plowing -->
+        <script type="text/javascript">
+            window.snowplow('setUserId', 'tester');
+            window.snowplow('trackPageView');
+        </script>
+        <!-- Snowplow stops plowing -->
+
+    </head>
+
+    <body>
+
+        <header class="header it-header">
+        </header>
+
+        <div class="d-flex justify-content-center align-items-center vh-100">
+            <div class="col-8 mx-auto">
+                <div class="jumbotron it-jumb-1">
+                    <div class="jumbotron it-jumb-2">
+                        <h1 class="text-white">Success!</h1>
+                        <h3 class="text-white">Thanks for purchasing from the Snowplow demo store.</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer it-footer">
+        </footer>
+
+    </body>
+
+</html>
