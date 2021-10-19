@@ -3,7 +3,7 @@
     "description": "Schema for a cart action event",
     "self": {
         "vendor": "test.example",
-        "name": "cart_action",
+        "name": "cart_action_event",
         "format": "jsonschema",
         "version": "1-0-0"
     },
